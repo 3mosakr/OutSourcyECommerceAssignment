@@ -1,0 +1,6 @@
+@OutSourcyECommerceAssignment_HostAddress = http://localhost:5162
+
+GET {{OutSourcyECommerceAssignment_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

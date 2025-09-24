@@ -43,7 +43,9 @@ The application seeds initial data on migration:
 - **Orders:** 4 sample orders with related products and total prices.
 
 ---
-
+### ERD
+![ERD](https://github.com/3mosakr/OutSourcyECommerceAssignment/blob/master/OutSourcyECommerceAssignment/ERD/ERD%20Ecommerce.png)
+---
 ## ▶️ How to Run
 1. Clone the repository:
    ```bash

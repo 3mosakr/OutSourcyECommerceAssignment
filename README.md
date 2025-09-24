@@ -75,7 +75,7 @@ The application seeds initial data on migration:
       "phone": "0100000000"
     }
   ```
-# ✅ Response (201):
+### ✅ Response (201):
   ```bash
     {
     "id": 5,
@@ -84,7 +84,7 @@ The application seeds initial data on migration:
     "phone": "0100000000"
     }
   ```
-# ❌ Create Customer (duplicate email)
+### ❌ Create Customer (duplicate email)
   ```bash
     {
       "success": false,
@@ -104,7 +104,7 @@ The application seeds initial data on migration:
       ]
     }
    ```
-# ✅ Update Order Status
+### ✅ Update Order Status
   ```bash
     PUT /api/order/1/status
     Content-Type: application/json
@@ -112,7 +112,7 @@ The application seeds initial data on migration:
     "Delivered"
 
   ```
-# ❌ If stock is insufficient in add or update:
+### ❌ If stock is insufficient in add or update:
   ```bash
     {
       "success": false,

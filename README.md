@@ -63,6 +63,56 @@ The application seeds initial data on migration:
 4. Open Postman for testing
 
 ---
+## 📌 API Endpoints
+1. ### 🟢 Customers
+  1. Get all customers
+      ```bash
+     GET /api/customer
+  2. Get customer by Id
+     ```bash
+     GET /api/customer/{id}
+  3. ➕ Create Customer
+      ```bash
+        POST /api/customer
+        Content-Type: application/json
+        
+        {
+          "name": "Ali Ahmed",
+          "email": "ali@example.com",
+          "phone": "0100000000"
+        }
+      ```
+
+   
+4. ### 🟢 Orders
+  1. Get all orders
+     ```bash
+     GET /api/order
+  2. GET /api/order
+      ```bash
+      GET /api/order/{id}
+  3. Create order
+     ```bash
+     POST /api/order
+    Content-Type: application/json
+    
+    {
+      "customerId": 1,
+      "orderProducts": [
+        { "productId": 1, "quantity": 2 },
+        { "productId": 2, "quantity": 1 }
+      ]
+    }
+
+  4. Update order status
+     ```bash
+     PUT /api/order/{id}/status
+    Content-Type: application/json
+    
+    "Delivered"
+
+
+---
 ## 📌 Example API Requests
 1. ➕ Create Customer
   ```bash

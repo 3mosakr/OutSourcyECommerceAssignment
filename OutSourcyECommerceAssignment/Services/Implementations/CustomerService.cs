@@ -13,7 +13,6 @@ namespace OutSourcyECommerceAssignment.Services.Implementations
             _customerRepository = customerRepository;
         }
 
-       
 
         public async Task<IEnumerable<Customer>> GetAllCusomersAsync()
         {
@@ -28,6 +27,11 @@ namespace OutSourcyECommerceAssignment.Services.Implementations
         public Task<Customer> AddAsync(Customer customer)
         {
             return _customerRepository.AddAsync(customer);
+        }
+
+        public async Task<bool> EmailExistsAsync(string email)
+        {
+            return await _customerRepository.EmailExistsAsync(email);
         }
     }
 }

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace OutSourcyECommerceAssignment.Migrations
 {
     /// <inheritdoc />
-    public partial class initialCreate : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -120,10 +120,10 @@ namespace OutSourcyECommerceAssignment.Migrations
                 columns: new[] { "Id", "CustomerId", "OrderDate", "Status", "TotalPrice" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2025, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Pending", 0m },
-                    { 2, 2, new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Pending", 0m },
-                    { 3, 3, new DateTime(2025, 7, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "Pending", 0m },
-                    { 4, 1, new DateTime(2025, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), "Pending", 0m }
+                    { 1, 1, new DateTime(2025, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Pending", 1199.98m },
+                    { 2, 2, new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Pending", 699.99m },
+                    { 3, 3, new DateTime(2025, 7, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "Pending", 699.98m },
+                    { 4, 1, new DateTime(2025, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), "Pending", 1199.97m }
                 });
 
             migrationBuilder.InsertData(

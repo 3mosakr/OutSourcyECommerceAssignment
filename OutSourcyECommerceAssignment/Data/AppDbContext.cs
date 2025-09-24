@@ -36,23 +36,22 @@ namespace OutSourcyECommerceAssignment.Data
             };
             List<Order> orders = new()
             {
-                new Order { Id = 1, CustomerId = 1, OrderDate = new DateTime(2025, 5, 15)},
-                new Order { Id = 2, CustomerId = 2, OrderDate = new DateTime(2025, 6, 10) },
-                new Order { Id = 3, CustomerId = 3, OrderDate = new DateTime(2025, 7, 20) },
-                new Order { Id = 4, CustomerId = 1, OrderDate = new DateTime(2025, 8, 8) },
+                new Order { Id = 1, CustomerId = 1, OrderDate = new DateTime(2025, 5, 15), Status = "Pending", TotalPrice = 999.99M + 199.99M },// Laptop + Headphones
+                new Order { Id = 2, CustomerId = 2, OrderDate = new DateTime(2025, 6, 10), Status = "Pending", TotalPrice = 699.99M },// Smartphone 
+                new Order { Id = 3, CustomerId = 3, OrderDate = new DateTime(2025, 7, 20), Status = "Pending", TotalPrice = 299.99M + 399.99M}, // Smartwatch + Tablet
+                new Order { Id = 4, CustomerId = 1, OrderDate = new DateTime(2025, 8, 8), Status = "Pending", TotalPrice = 699.99M + 199.99M + 299.99M}, // Smartphone + Headphones + Smartwatch
             };
             List<OrderProduc> orderProducts = new()
             {
-                new OrderProduc { OrderId = 1, ProductId = 1, Quantity = 1, EachPrice = products[0].Price },
-                new OrderProduc { OrderId = 1, ProductId = 3, Quantity = 1, EachPrice = products[2].Price },
-                new OrderProduc { OrderId = 2, ProductId = 2, Quantity = 1, EachPrice = products[1].Price },
-                new OrderProduc { OrderId = 3, ProductId = 4, Quantity = 1, EachPrice = products[3].Price },
-                new OrderProduc { OrderId = 3, ProductId = 5, Quantity = 1, EachPrice = products[4].Price },
-                new OrderProduc { OrderId = 4, ProductId = 2, Quantity = 1, EachPrice = products[1].Price },
-                new OrderProduc { OrderId = 4, ProductId = 3, Quantity = 1, EachPrice = products[2].Price },
-                new OrderProduc { OrderId = 4, ProductId = 4, Quantity = 1, EachPrice = products[3].Price },
+                new OrderProduc { OrderId = 1, ProductId = 1, Quantity = 1, EachPrice = 999.99M }, // Laptop
+                new OrderProduc { OrderId = 1, ProductId = 3, Quantity = 1, EachPrice = 199.99M }, // Headphones
+                new OrderProduc { OrderId = 2, ProductId = 2, Quantity = 1, EachPrice = 699.99M }, // Smartphone
+                new OrderProduc { OrderId = 3, ProductId = 4, Quantity = 1, EachPrice = 299.99M }, // Smartwatch
+                new OrderProduc { OrderId = 3, ProductId = 5, Quantity = 1, EachPrice = 399.99M }, // Tablet
+                new OrderProduc { OrderId = 4, ProductId = 2, Quantity = 1, EachPrice = 699.99M }, // Smartphone
+                new OrderProduc { OrderId = 4, ProductId = 3, Quantity = 1, EachPrice = 199.99M }, // Headphones
+                new OrderProduc { OrderId = 4, ProductId = 4, Quantity = 1, EachPrice = 299.99M }, // Smartwatch
             };
-
 
             // Configure relationships and constraints if necessary
             // Order entity configuration
@@ -92,7 +91,7 @@ namespace OutSourcyECommerceAssignment.Data
             {
                 entity.Property(p => p.Name).IsRequired().HasMaxLength(100);
                 entity.Property(p => p.Description).HasMaxLength(500);
-                entity.Property(p => p.Price).IsRequired().HasPrecision(18,2);
+                entity.Property(p => p.Price).IsRequired().HasPrecision(18, 2);
                 entity.Property(p => p.Stock).IsRequired();
                 // Seed data
                 entity.HasData(products);

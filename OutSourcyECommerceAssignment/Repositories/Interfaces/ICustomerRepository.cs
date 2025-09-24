@@ -7,6 +7,7 @@ namespace OutSourcyECommerceAssignment.Repositories.Interfaces
         Task<IEnumerable<Customer>> GetAllAsync();
         Task<Customer?> GetByIdAsync(int id);
         Task<Customer> AddAsync(Customer customer);
+        Task<bool> EmailExistsAsync(string email);
 
     }
 }

@@ -15,7 +15,7 @@ namespace OutSourcyECommerceAssignment.Repositories.Implementations
 
         public async Task<IEnumerable<Customer>> GetAllAsync()
         {
-            return await _context.Customers.ToListAsync();
+            return await _context.Customers.AsNoTracking().ToListAsync();
         }
 
         public async Task<Customer?> GetByIdAsync(int id)
@@ -27,6 +27,11 @@ namespace OutSourcyECommerceAssignment.Repositories.Implementations
             await _context.Customers.AddAsync(customer);
             await _context.SaveChangesAsync();
             return customer;
+        }
+
+        public async Task<bool> EmailExistsAsync(string email)
+        {
+            return await _context.Customers.AnyAsync(c => c.Email == email);
         }
 
     }

@@ -12,8 +12,8 @@ using OutSourcyECommerceAssignment.Data;
 namespace OutSourcyECommerceAssignment.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250922205645_initialCreate")]
-    partial class initialCreate
+    [Migration("20250924211800_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -122,7 +122,7 @@ namespace OutSourcyECommerceAssignment.Migrations
                             CustomerId = 1,
                             OrderDate = new DateTime(2025, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Pending",
-                            TotalPrice = 0m
+                            TotalPrice = 1199.98m
                         },
                         new
                         {
@@ -130,7 +130,7 @@ namespace OutSourcyECommerceAssignment.Migrations
                             CustomerId = 2,
                             OrderDate = new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Pending",
-                            TotalPrice = 0m
+                            TotalPrice = 699.99m
                         },
                         new
                         {
@@ -138,7 +138,7 @@ namespace OutSourcyECommerceAssignment.Migrations
                             CustomerId = 3,
                             OrderDate = new DateTime(2025, 7, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Pending",
-                            TotalPrice = 0m
+                            TotalPrice = 699.98m
                         },
                         new
                         {
@@ -146,7 +146,7 @@ namespace OutSourcyECommerceAssignment.Migrations
                             CustomerId = 1,
                             OrderDate = new DateTime(2025, 8, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Pending",
-                            TotalPrice = 0m
+                            TotalPrice = 1199.97m
                         });
                 });
 

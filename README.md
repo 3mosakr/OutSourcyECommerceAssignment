@@ -1,5 +1,3 @@
-# OutSourcyECommerceAssignment
-
 # 🛒 E-Commerce 
 
 This project is a simple **E-Commerce REST API** built with **.NET 9, Entity Framework Core, and SQL Server**.  

@@ -63,5 +63,60 @@ The application seeds initial data on migration:
 4. Open Postman for testing
 
 ---
+## 📌 Example API Requests
+1. ➕ Create Customer
+  ```bash
+    POST /api/customer
+    Content-Type: application/json
+    
+    {
+      "name": "Ali Ahmed",
+      "email": "ali@example.com",
+      "phone": "0100000000"
+    }
+  ```
+# ✅ Response (201):
+  ```bash
+    {
+    "id": 5,
+    "name": "Ali Ahmed",
+    "email": "ali@example.com",
+    "phone": "0100000000"
+    }
+  ```
+# ❌ Create Customer (duplicate email)
+  ```bash
+    {
+      "success": false,
+      "error": "Email already exists.",
+      "statusCode": 400
+    }
+  ```
+2. ➕ Create Order
+   ```bash
+    POST /api/order
+    Content-Type: application/json
+    {
+      "customerId": 1,
+      "orderProducts": [
+        { "productId": 1, "quantity": 2 },
+        { "productId": 2, "quantity": 1 }
+      ]
+    }
+   ```
+# ✅ Update Order Status
+  ```bash
+    PUT /api/order/1/status
+    Content-Type: application/json
+    
+    "Delivered"
 
-
+  ```
+# ❌ If stock is insufficient in add or update:
+  ```bash
+    {
+      "success": false,
+      "error": "Insufficient stock for product Laptop (id=1)",
+      "statusCode": 400
+    }
+  ```
